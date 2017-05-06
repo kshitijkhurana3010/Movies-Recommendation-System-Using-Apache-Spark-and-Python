@@ -1,0 +1,17 @@
+Used both windows cmd and git for file transfers and execution
+1) Transfer the file to the server:
+pscp cosine.py movies.csv ratings.csv kkhuran1@dsba-hadoop.uncc.edu:/users/kkhuran1/
+
+2) Create a folder in Hadoop and move the files
+hadoop fs -put ratings.csv /user/kkhuran1/input
+hadoop fs -put movies.csv /user/kkhuran1/input
+
+3) Spark program for movie recommendation and its required arguments
+spark-submit cosine.py /user/kkhuran1/input/ratings.csv   /user/kkhuran1/input/movies.csv > movies_final.out
+
+4) cat the file files to check the results
+cat movies_final.out
+
+5) Transfer the files to local folder
+pscp kkhuran1@dsba-hadoop.uncc.edu:/users/kkhuran1/movies_final.out "E:\"
+
