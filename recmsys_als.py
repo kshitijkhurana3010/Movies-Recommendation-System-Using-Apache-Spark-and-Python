@@ -1,7 +1,5 @@
 '''
 Cloud Computing Project ALS implementation
-Group 21
-Team: Satish Kumar, Abhijit Nair, Kshitij Khurana
 '''
 
 from pyspark import SparkContext
